@@ -43,17 +43,4 @@ Lambda expressions with Java's built-in functional interfaces.
 - Add error handling for null inputs where applicable.
 - Test and print results of each lambda expression in the `BuiltInLambdaExample` class.
 
-## How to Run
 
-1. Compile the Java files using `javac`.
-2. Run each task's main class to see the output of the lambda expressions.
-
-```bash
-javac MathOperation.java
-java LambdaExample
-
-javac StringOperation.java
-java CustomLambdaExample
-
-javac BuiltInLambdaExample.java
-java BuiltInLambdaExample
