@@ -5,38 +5,23 @@ import java.util.function.Function;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 
-@FunctionalInterface
-interface MathOperation {
-    double operate(double a, double b) throws ArithmeticException;
-}
-
-public class LambdaExample {
+public class BuiltInLambdaExample {
     public static void main(String[] args) {
-        // Addition
-        MathOperation addition = (a, b) -> a + b;
-        System.out.println("Addition: " + addition.operate(5, 3)); // Output: 8.0
+        // Predicate: checks if a number is positive
+        Predicate<Integer> isPositive = num -> num > 0;
+        System.out.println("Is 5 positive? " + isPositive.test(5)); // Output: true
 
-        // Subtraction
-        MathOperation subtraction = (a, b) -> a - b;
-        System.out.println("Subtraction: " + subtraction.operate(5, 3)); // Output: 2.0
+        // Function: converts a string to its length
+        Function<String, Integer> stringLength = str -> str.length();
+        System.out.println("Length of 'Hello': " + stringLength.apply("Hello")); // Output: 5
 
-        // Multiplication
-        MathOperation multiplication = (a, b) -> a * b;
-        System.out.println("Multiplication: " + multiplication.operate(5, 3)); // Output: 15.0
+        // Consumer: prints a string
+        Consumer<String> printString = str -> System.out.println(str);
+        printString.accept("This is a test string."); // Output: This is a test string.
 
-        // Division with error handling for division by zero
-        MathOperation division = (a, b) -> {
-            if (b == 0) {
-                throw new ArithmeticException("Division by zero");
-            }
-            return a / b;
-        };
-        try {
-            System.out.println("Division: " + division.operate(6, 3)); // Output: 2.0
-            System.out.println("Division by zero: " + division.operate(6, 0)); // This will throw an exception
-        } catch (ArithmeticException e) {
-            System.out.println("Error: " + e.getMessage());
-        }
+        // Supplier: supplies a default message
+        Supplier<String> defaultMessage = () -> "Default Message";
+        System.out.println("Supplier: " + defaultMessage.get()); // Output: Default Message
     }
 }
 
