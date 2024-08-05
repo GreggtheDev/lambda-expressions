@@ -10,27 +10,29 @@ This assignment focuses on practicing the use of lambda expressions in Java. The
 
 ## Task 1: MathOperation.java
 
-In this task, you will create simple lambda expressions to perform basic arithmetic operations.
+Simple lambda expressions to perform basic arithmetic operations.
 
 ### MathOperation.java
 
 - Define a `MathOperation` functional interface with an `operate` method.
 - Implement lambda expressions for addition, subtraction, multiplication, and division.
+- Add error handling for division by zero.
 - Test and print results of arithmetic operations in the `LambdaExample` class.
 
 ## Task 2: StringOperation.java
 
-In this task, you will create your own functional interface and use lambda expressions to manipulate strings.
+Functional interface and use lambda expressions to manipulate strings.
 
 ### StringOperation.java
 
 - Define a `StringOperation` functional interface with an `operate` method.
 - Implement lambda expressions for string concatenation and uppercase concatenation.
+- Add error handling for null inputs.
 - Test and print results of string operations in the `CustomLambdaExample` class.
 
 ## Task 3: BuiltInLambdaExample.java
 
-In this task, you will use lambda expressions with Java's built-in functional interfaces.
+Lambda expressions with Java's built-in functional interfaces.
 
 ### BuiltInLambdaExample.java
 
@@ -38,6 +40,7 @@ In this task, you will use lambda expressions with Java's built-in functional in
 - Use `Function` to convert a string to its length.
 - Use `Consumer` to print a string.
 - Use `Supplier` to supply a default message.
+- Add error handling for null inputs where applicable.
 - Test and print results of each lambda expression in the `BuiltInLambdaExample` class.
 
 ## How to Run
@@ -54,11 +57,3 @@ java CustomLambdaExample
 
 javac BuiltInLambdaExample.java
 java BuiltInLambdaExample
-```
-
-## Summary
-
-This assignment helps in understanding and applying lambda expressions in Java through the creation and use of both custom and built-in functional interfaces. By completing these tasks, you will gain hands-on experience in writing more concise and readable code using lambda expressions.
-```
-
-This README provides clear instructions and explanations for each task without including the full Java code, making it concise and easy to follow.
